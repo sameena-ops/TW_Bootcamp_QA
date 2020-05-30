@@ -4,11 +4,11 @@ pipeline {
    stages {
       stage('checkout') {
          steps {
-            checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/sameena-ops/TW_Bootcamp_QA/tree/master/Bootcamp_UI']]])
+            checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/sameena-ops/TW_Bootcamp_QA']]])
          }
       }
 
-      stage('Maven installation') {
+      stage('Maven installation')
          steps {
              sh 'mvn clean test'
         }
