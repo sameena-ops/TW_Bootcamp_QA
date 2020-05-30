@@ -10,7 +10,7 @@ pipeline {
 
       stage('Maven installation') {
          steps {
-             sh 'mvn clean test'
+             sh 'mvn -f Bootcamp_UI/pom.xml clean test'
         }
       }
    }
