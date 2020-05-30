@@ -46,5 +46,6 @@ public class UI_JuiceShopTest {
         driver.findElement(By.id("securityAnswerControl")).sendKeys(password);
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.findElement(By.id("registerButton")).click();
+        driver.quit();
     }
 }
