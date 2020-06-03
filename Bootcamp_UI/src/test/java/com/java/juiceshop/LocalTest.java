@@ -1,3 +1,4 @@
+/*
 package com.java.juiceshop;
 
 import com.java.utilities.BrowserFactory;
@@ -112,3 +113,4 @@ public class LocalTest {
 }
 
 
+*/
