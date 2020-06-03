@@ -4,6 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -101,11 +102,12 @@ public class UI_JuiceShopTest {
             BrowserFactory.driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
             BrowserFactory.driver.findElement(By.id("submitButton")).click();
             BrowserFactory.driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+            BrowserFactory.driver.navigate().refresh();
            // BrowserFactory.driver.findElement(By.xpath("//*[@id=\"mat-dialog-1\"]/app-product-details/mat-dialog-content/div/div[2]/mat-dialog-actions/button[1]")).click();
         }
 
     }
-    @AfterClass
+    @AfterAll
     public void quit(){
         BrowserFactory.driver.quit();
     }
