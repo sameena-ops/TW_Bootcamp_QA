@@ -33,10 +33,13 @@ public class UI_JuiceShopTest {
     public void testFirstTimeRegister() {
         BrowserFactory.driver.get("http://localhost:3000/#/register");
         BrowserFactory.driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        try{
         if (BrowserFactory.driver.findElement(By.xpath("//*[@id=\"mat-dialog-0\"]")).isDisplayed()) {
             BrowserFactory.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
             BrowserFactory.driver.findElement(By.xpath("//*[@id=\"mat-dialog-0\"]/app-welcome-banner/div/div[2]/button[2]")).click();
         }
+        }
+        catch (NoSuchElementException e){
         BrowserFactory.driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         BrowserFactory.driver.findElement(By.id("emailControl")).sendKeys(email);
         BrowserFactory.driver.findElement(By.id("passwordControl")).sendKeys(password);
@@ -50,6 +53,7 @@ public class UI_JuiceShopTest {
         BrowserFactory.driver.findElement(By.id("registerButton")).click();
         boolean bol = BrowserFactory.driver.findElement(By.id("email")).isDisplayed();
         Assertions.assertTrue(bol);
+    }
     }
 
     @Test
