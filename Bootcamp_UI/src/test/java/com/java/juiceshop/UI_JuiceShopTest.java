@@ -2,6 +2,7 @@ package com.java.juiceshop;
 import com.java.utilities.BrowserFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.jupiter.api.AfterAll;
@@ -107,7 +108,7 @@ public class UI_JuiceShopTest {
         }
 
     }
-    @AfterAll
+    @After
     public void quit(){
         BrowserFactory.driver.quit();
     }
