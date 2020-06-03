@@ -31,7 +31,7 @@ public class UI_JuiceShopTest {
 
     @Test
     public void testFirstTimeRegister() {
-        BrowserFactory.driver.get("http://localhost:3000/#/register");
+        BrowserFactory.driver.get("http://juice-shop:3000/#/register");
         BrowserFactory.driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         try{
         if (BrowserFactory.driver.findElement(By.xpath("//*[@id=\"mat-dialog-0\"]")).isDisplayed()) {
@@ -60,7 +60,7 @@ public class UI_JuiceShopTest {
     public void testRegisteredUserLogin() {
         //setup();
         BrowserFactory.driver.manage().window().maximize();
-        BrowserFactory.driver.get("http://localhost:3000/#/login");
+        BrowserFactory.driver.get("http://juice-shop:3000/#/login");
         BrowserFactory.driver.findElement(By.id("navbarAccount")).click();
         BrowserFactory.driver.findElement(By.id("navbarLoginButton")).click();
         BrowserFactory.driver.findElement(By.id("email")).sendKeys("b@gmail.com");
@@ -76,7 +76,7 @@ public class UI_JuiceShopTest {
     public void testWriteReview() {
         // setup();
         BrowserFactory.driver.manage().window().maximize();
-        BrowserFactory.driver.get("http://localhost:3000/#/");
+        BrowserFactory.driver.get("http://juice-shop:3000/#/");
         BrowserFactory.driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
         try {
             if (BrowserFactory.driver.findElement(By.xpath("//*[@id=\"mat-dialog-0\"]")).isDisplayed()) {
