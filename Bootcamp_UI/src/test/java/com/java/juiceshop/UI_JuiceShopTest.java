@@ -96,7 +96,7 @@ public class UI_JuiceShopTest {
             BrowserFactory.driver.findElement(By.xpath("//div[@class='table-container custom-slate']/div[2]/mat-grid-list/div/mat-grid-tile[1]")).click();
             BrowserFactory.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
             // new WebDriverWait(BrowserFactory.driver, 20).until(ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(@id,'mat-input-')]"))).click();
-            BrowserFactory.driver.findElement(By.id("mat-dialog-1")).click();
+           // BrowserFactory.driver.findElement(By.id("mat-dialog-1")).click();
             BrowserFactory.driver.findElement(By.xpath("//textarea[contains(@id,\"mat-input\")]")).click();
             BrowserFactory.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
             BrowserFactory.driver.findElement(By.xpath("//textarea[contains(@id,\"mat-input\")]")).sendKeys("awesome");
