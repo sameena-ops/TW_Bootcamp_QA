@@ -21,8 +21,8 @@ public class BrowserFactory {
             WebDriverManager.chromedriver().setup();
              driver = new ChromeDriver();
           }
-          driver.manage().window().maximize();
-      if(browser.equalsIgnoreCase("remoteChrome")){
+
+      else {
           WebDriverManager.chromedriver().setup();
           DesiredCapabilities capabilities = new DesiredCapabilities();
           capabilities.setCapability("browserName", "chrome");
@@ -33,6 +33,8 @@ public class BrowserFactory {
               e.printStackTrace();
           }
           }
+
+          driver.manage().window().maximize();
       }
 
   }
