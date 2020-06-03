@@ -101,7 +101,7 @@ public class UI_JuiceShopTest {
             BrowserFactory.driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
             BrowserFactory.driver.findElement(By.id("submitButton")).click();
             BrowserFactory.driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-            BrowserFactory.driver.findElement(By.xpath("//*[@id=\"mat-dialog-1\"]/app-product-details/mat-dialog-content/div/div[2]/mat-dialog-actions/button[1]")).click();
+           // BrowserFactory.driver.findElement(By.xpath("//*[@id=\"mat-dialog-1\"]/app-product-details/mat-dialog-content/div/div[2]/mat-dialog-actions/button[1]")).click();
         }
 
     }
