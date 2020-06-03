@@ -40,7 +40,7 @@ public class UI_JuiceShopTest {
         }
         }
         catch (NoSuchElementException e){
-        BrowserFactory.driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        BrowserFactory.driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
         BrowserFactory.driver.findElement(By.id("emailControl")).sendKeys(email);
         BrowserFactory.driver.findElement(By.id("passwordControl")).sendKeys(password);
         BrowserFactory.driver.findElement(By.id("repeatPasswordControl")).sendKeys(password);
